@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.binary-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 7vh 7%;
+}
+
+.binary-container{
+    background-color: #e7e7e7;
+    width: 50vw;
+    border-radius: 10px;
+}
+
+.binary-box-fieldset{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 30px;
+    border-style: none;
+    padding: 3%;
+    align-items: center;
+}
+
+.binary-box-title{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.binary-box-input{
+    height: 4.5vh;
+    width: 15vw;
+    padding-left: 3px;
+}
+
+.binary-box-button{
+    height: 4.5vh;
+    width: 15vw;
+    cursor: pointer;
+}
+
+.binary-box-textarea{
+    height: 5vh;
+    min-width: 60%;
+    max-width: 60%;
+    min-height: 4.5vh;
+    max-height: 4.5vh;
+}
