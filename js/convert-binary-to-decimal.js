@@ -2,11 +2,11 @@ $(document).ready(function() {
   $('#binary-button-convert').click(function() {
     const binary = $('#binary-input').val();
     const sum = convertBinaryToDecimal(binary);
-    $('#txtDecimal').val(sum);
+    $('#binary-text-area').val(sum);
   });
 });
 
-function convertBinaryToDecimal(binary) {
+const convertBinaryToDecimal = (binary) => {
   let exponent = binary.length - 1;
   let sum = 0;
 
@@ -21,7 +21,7 @@ function convertBinaryToDecimal(binary) {
   return sum;
 }
 
-function calculatePowerOfTwo(exponent) {
+const calculatePowerOfTwo = (exponent) => {
   let result = 1;
   
   for (let index = 0; index < exponent; index++) {
@@ -31,6 +31,6 @@ function calculatePowerOfTwo(exponent) {
   return result;
 }
 
-function multiplyResultByCharacter(result, char) {
+const multiplyResultByCharacter = (result, char) => {
   return result * (char - '0');
 }
