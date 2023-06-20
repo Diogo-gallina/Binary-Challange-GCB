@@ -1,10 +1,18 @@
 $(document).ready(function() {
   $('#binary-button-convert').click(function() {
     const binary = $('#binary-input').val();
+
+    (binary.trim() === '') ? (alert('Insert a binary value, please.');
+    
     const sum = convertBinaryToDecimal(binary);
     $('#binary-text-area').val(sum);
   });
 });
+
+function isValidBinary(binary) {
+  const validChars = /^[01]+$/;
+  return validChars.test(binary);
+}
 
 const convertBinaryToDecimal = (binary) => {
   let exponent = binary.length - 1;
