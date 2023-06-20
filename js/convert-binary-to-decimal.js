@@ -22,15 +22,12 @@ function isValidBinary(binary) {
 
 const convertBinaryToDecimal = (binary) => {
   let exponent = binary.length - 1;
-  let sum = 0;
 
-  for (let charNum = 0; charNum < binary.length; charNum++) {
-    const char = binary.charAt(charNum);
-    const result = calculatePowerOfTwo(exponent);
+  const sum = binary.split('').reduce((accumulator, char, charNum) => {
+    const result = calculatePowerOfTwo(exponent - charNum);
     const multipliedResult = multiplyResultByCharacter(result, char);
-    sum += multipliedResult;
-    exponent--;
-  }
+    return accumulator + multipliedResult;
+  }, 0);
 
   return sum;
 }
