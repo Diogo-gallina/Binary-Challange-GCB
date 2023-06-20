@@ -2,7 +2,13 @@ $(document).ready(function() {
   $('#binary-button-convert').click(function() {
     const binary = $('#binary-input').val();
 
-    (binary.trim() === '') ? (alert('Insert a binary value, please.');
+    if (binary.trim() === '') {
+      alert('Insert a binary value, please.');
+      return;
+    } else if(!isValidBinary(binary)){
+      alert('Entered characters can only be 0 or 1');
+      return;
+    }
     
     const sum = convertBinaryToDecimal(binary);
     $('#binary-text-area').val(sum);
