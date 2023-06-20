@@ -6,6 +6,7 @@ $(document).ready(function() {
   });
 });
 
+
 function calculatePowerOfTwo(exponent) {
   let result = 1;
   
@@ -14,4 +15,8 @@ function calculatePowerOfTwo(exponent) {
   }
   
   return result;
+}
+
+function multiplyResultByCharacter(result, char) {
+  return result * (char - '0');
 }
