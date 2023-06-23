@@ -12,19 +12,19 @@ To use the binary to decimal converter, follow these steps:
 
 ##Functions
 
-isValidBinary(binary: string): boolean
+- isValidBinary(binary: string): boolean
 This function checks if the given binary string is valid, i.e., it contains only 0s and 1s.
 
-showAlert(message: string): void
+- showAlert(message: string): void
 This function displays an alert with the provided message.
 
-convertBinaryToDecimal(binaryString: string): number
+- convertBinaryToDecimal(binaryString: string): number
 This function converts a binary string to a decimal number. It validates the input and returns the decimal value. If the input is invalid or empty, it shows an alert and returns 0.
 
-convertCharacterToNumber(char: string): number
+- convertCharacterToNumber(char: string): number
 This function converts a binary character ('0' or '1') to a corresponding number (0 or 1).
 
-multiplyResultByCharacter(result: number, char: string): number
+- multiplyResultByCharacter(result: number, char: string): number
 This function multiplies the given result by the number representation of the binary character.
 
 
